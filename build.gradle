@@ -1,0 +1,35 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    ext {
+        springBootVersion = '2.1.7.RELEASE'
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+configurations.all {
+    resolutionStrategy {
+        cacheDynamicVersionsFor 0, 'seconds'
+    }
+}
+
+group = 'uk.gov.dhsc.htbhf'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.11
+targetCompatibility = 1.11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.github.tomakehurst:wiremock-standalone:2.24.1'
+    implementation 'org.springframework.boot:spring-boot-starter:2.1.7.RELEASE'
+}
