@@ -1,0 +1,25 @@
+{
+  "id" : "bff81863-bfe5-4d85-999b-6a607787bb5e",
+  "name" : "places_v1_addresses_postcode",
+  "request" : {
+    "urlPath" : "/places/v1/addresses/postcode",
+    "queryParameters": {
+      "postcode": {
+        "matches": ".*"
+      }
+    },
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 401,
+    "body" : "{\"fault\":{\"faultstring\":\"Failed to resolve API Key variable request.queryparam.key\",\"detail\":{\"errorcode\":\"steps.oauth.v2.FailedToResolveAPIKey\"}}}",
+    "headers" : {
+      "Date" : "Fri, 16 Aug 2019 14:40:47 GMT",
+      "Content-Type" : "application/json",
+      "Connection" : "keep-alive"
+    }
+  },
+  "uuid" : "bff81863-bfe5-4d85-999b-6a607787bb5e",
+  "persistent" : true,
+  "insertionIndex" : 1
+}
