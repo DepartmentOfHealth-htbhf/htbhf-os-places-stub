@@ -10,6 +10,10 @@ buildscript {
     }
 }
 
+plugins {
+    id 'org.shipkit.java' version '2.0.31'
+}
+
 apply plugin: 'java'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
