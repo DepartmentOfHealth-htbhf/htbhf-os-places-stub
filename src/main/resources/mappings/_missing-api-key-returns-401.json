@@ -1,6 +1,6 @@
 {
   "id" : "bff81863-bfe5-4d85-999b-6a607787bb5e",
-  "name" : "places_v1_addresses_postcode",
+  "name" : "No API key provided",
   "request" : {
     "urlPath" : "/places/v1/addresses/postcode",
     "queryParameters": {
