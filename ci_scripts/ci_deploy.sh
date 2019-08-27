@@ -40,10 +40,8 @@ export APP_PATH="build/libs/$APP_NAME-$APP_VERSION.jar"
 # deploy to development and staging
 export CF_SPACE=development
 /bin/bash ${SCRIPT_DIR}/deploy.sh
-cf map-route "${APP_NAME}-${CF_SPACE}" ${CF_PUBLIC_DOMAIN} --hostname ${DEVELOPMENT_HOSTNAME}
 
 RESULT=$?
-
 if [[ ${RESULT} != 0 ]]; then
   echo "# Deployment to development failed, skipping deployment to staging"
   echo "# See deployment logs below"
@@ -51,6 +49,27 @@ if [[ ${RESULT} != 0 ]]; then
   exit 1
 fi
 
+cf map-route "${APP_NAME}-${CF_SPACE}" ${CF_PUBLIC_DOMAIN} --hostname ${DEVELOPMENT_HOSTNAME}
+
+RESULT=$?
+if [[ ${RESULT} != 0 ]]; then
+  echo "# Deployment to development failed (map-route), skipping deployment to staging"
+  exit 1
+fi
+
 export CF_SPACE=staging
+
 /bin/bash ${SCRIPT_DIR}/deploy.sh
+RESULT=$?
+if [[ ${RESULT} != 0 ]]; then
+  echo "# Deployment to staging failed"
+  echo "# See deployment logs below"
+  cf logs ${APP_NAME}-${CF_SPACE} --recent
+  exit 1
+fi
 cf map-route "${APP_NAME}-${CF_SPACE}" ${CF_PUBLIC_DOMAIN} --hostname ${STAGING_HOSTNAME}
+RESULT=$?
+if [[ ${RESULT} != 0 ]]; then
+  echo "# Deployment to staging failed (map-route)"
+  exit 1
+fi
