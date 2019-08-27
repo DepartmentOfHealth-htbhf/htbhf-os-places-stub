@@ -26,5 +26,6 @@
   },
   "uuid" : "21de820c-6d8f-4be1-bdff-545b78cec631",
   "persistent" : true,
+  "priority" : 10,
   "insertionIndex" : 2
 }
