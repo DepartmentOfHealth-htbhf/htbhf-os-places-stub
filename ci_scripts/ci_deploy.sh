@@ -8,6 +8,7 @@ check_variable_is_set(){
 }
 
 check_variable_is_set APP_NAME
+check_variable_is_set APP_VERSION
 check_variable_is_set BIN_DIR
 check_variable_is_set GH_WRITE_TOKEN
 check_variable_is_set CF_PUBLIC_DOMAIN
@@ -34,7 +35,6 @@ export SCRIPT_DIR=${BIN_DIR}/deployment-scripts
 export PATH=$PATH:${SCRIPT_DIR}
 
 # determine APP_PATH
-export APP_VERSION=`cat version.properties | grep "version" | cut -d'=' -f2`
 export APP_PATH="build/libs/$APP_NAME-$APP_VERSION.jar"
 
 # deploy to development and staging
