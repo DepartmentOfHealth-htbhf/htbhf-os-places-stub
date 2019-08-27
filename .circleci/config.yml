@@ -23,7 +23,7 @@ jobs:
     docker:
       - image: circleci/openjdk:11.0.4-jdk-stretch
     environment:
-      APP_NAME: htbhf-os-places
+      APP_NAME: htbhf-os-places-stub
       SMOKE_TESTS: ./ci_scripts/smoke_tests.sh
       BIN_DIR: ./bin
     steps:
