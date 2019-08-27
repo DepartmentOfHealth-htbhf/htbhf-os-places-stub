@@ -27,6 +27,7 @@ public class WireMockConfig {
                 .port(port)
                 // work around for wiremock not reading from classpath of spring boot jars.
                 // see https://github.com/tomakehurst/wiremock/issues/725
-                .fileSource(new ClasspathFileSource("BOOT-INF/classes"));
+                .fileSource(new ClasspathFileSource("BOOT-INF/classes"))
+                .usingFilesUnderDirectory("src/main/resources");
     }
 }
