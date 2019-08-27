@@ -6,7 +6,7 @@ applications:
   health-check-type: http
   health-check-http-endpoint: /places/v1/addresses/postcode?postcode=BS11AA&key=foo
   routes:
-    - route: htbhf-os-places-stub((app-suffix)).apps.internal
+    - route: htbhf-os-places-stub((app-suffix)).london.cloudapps.digital
   env:
     JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 11.+ }}'
     SERVER_PORT: '8080'
