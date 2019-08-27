@@ -36,3 +36,10 @@ dependencies {
     implementation 'com.github.tomakehurst:wiremock-standalone:2.24.1'
     implementation 'org.springframework.boot:spring-boot-starter:2.1.7.RELEASE'
 }
+
+// Copying to root of jar to be readable by wiremock.
+bootJar {
+    from ('src/main/resources/') {
+        '.'
+    }
+}
