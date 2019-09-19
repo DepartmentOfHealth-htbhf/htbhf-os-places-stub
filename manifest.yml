@@ -5,8 +5,6 @@ applications:
   - java_buildpack
   health-check-type: process
   no-route: true
-  memory: 2G
-  instances: 2
   env:
     JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 11.+ }}'
     SERVER_PORT: '8080'

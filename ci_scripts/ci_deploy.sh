@@ -73,3 +73,7 @@ if [[ ${RESULT} != 0 ]]; then
   echo "# Deployment to staging failed (map-route)"
   exit 1
 fi
+
+echo "cf scale ${APP_NAME} -i 3 -m 2G -f"
+cf scale ${APP_NAME} -i 3 -m 3G -f
+
