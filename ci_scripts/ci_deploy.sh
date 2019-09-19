@@ -74,6 +74,6 @@ if [[ ${RESULT} != 0 ]]; then
   exit 1
 fi
 
-echo "cf scale ${APP_NAME} -i 3 -m 2G -f"
-cf scale ${APP_NAME} -i 3 -m 3G -f
+echo "cf scale ${APP_NAME}-${CF_SPACE} -i 3 -m 2G -f"
+cf scale ${APP_NAME}-${CF_SPACE} -i 2 -m 2G -f
 
