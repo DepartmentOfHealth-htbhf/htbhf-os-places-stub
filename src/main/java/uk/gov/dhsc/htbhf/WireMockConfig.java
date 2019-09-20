@@ -26,6 +26,7 @@ public class WireMockConfig {
     private WireMockConfiguration wiremockOptions() {
         return options()
                 .port(port)
+                .containerThreads(100)
                 .fileSource(new ClasspathFileSourceWithoutLeadingSlash());
     }
 }
