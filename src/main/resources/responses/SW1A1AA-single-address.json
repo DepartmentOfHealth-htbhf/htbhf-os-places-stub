@@ -1,0 +1,44 @@
+{
+  "header" : {
+    "uri" : "https://api.ordnancesurvey.co.uk/places/v1/addresses/postcode?postcode=sw1a1aa",
+    "query" : "postcode=sw1a1aa",
+    "offset" : 0,
+    "totalresults" : 1,
+    "format" : "JSON",
+    "dataset" : "DPA",
+    "lr" : "EN,CY",
+    "maxresults" : 100,
+    "epoch" : "69",
+    "output_srs" : "EPSG:27700"
+  },
+  "results" : [ {
+    "DPA" : {
+      "UPRN" : "10033544614",
+      "UDPRN" : "23747212",
+      "ADDRESS" : "BUCKINGHAM PALACE, LONDON, SW1A 1AA",
+      "ORGANISATION_NAME" : "BUCKINGHAM PALACE",
+      "POST_TOWN" : "LONDON",
+      "POSTCODE" : "SW1A 1AA",
+      "RPC" : "1",
+      "X_COORDINATE" : 529090.0,
+      "Y_COORDINATE" : 179645.0,
+      "STATUS" : "APPROVED",
+      "LOGICAL_STATUS_CODE" : "1",
+      "CLASSIFICATION_CODE" : "PP",
+      "CLASSIFICATION_CODE_DESCRIPTION" : "Property Shell",
+      "LOCAL_CUSTODIAN_CODE" : 5990,
+      "LOCAL_CUSTODIAN_CODE_DESCRIPTION" : "CITY OF WESTMINSTER",
+      "POSTAL_ADDRESS_CODE" : "D",
+      "POSTAL_ADDRESS_CODE_DESCRIPTION" : "A record which is linked to PAF",
+      "BLPU_STATE_CODE" : "2",
+      "BLPU_STATE_CODE_DESCRIPTION" : "In use",
+      "TOPOGRAPHY_LAYER_TOID" : "osgb1000042921247",
+      "LAST_UPDATE_DATE" : "10/02/2016",
+      "ENTRY_DATE" : "27/04/2003",
+      "BLPU_STATE_DATE" : "27/04/2003",
+      "LANGUAGE" : "EN",
+      "MATCH" : 1.0,
+      "MATCH_DESCRIPTION" : "EXACT"
+    }
+  } ]
+}

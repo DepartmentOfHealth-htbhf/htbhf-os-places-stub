@@ -12,6 +12,7 @@ buildscript {
 
 plugins {
     id 'org.shipkit.java' version '2.0.31'
+    id 'io.franzbecker.gradle-lombok' version '1.14'
 }
 
 apply plugin: 'java'
@@ -24,6 +25,11 @@ configurations.all {
     }
 }
 
+lombok {
+    version = '1.18.4'
+    sha256 = ""
+}
+
 group = 'uk.gov.dhsc.htbhf'
 sourceCompatibility = 1.11
 targetCompatibility = 1.11
@@ -33,13 +39,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.tomakehurst:wiremock-standalone:2.24.1'
-    implementation 'org.springframework.boot:spring-boot-starter:2.1.7.RELEASE'
-}
-
-// Copying to root of jar to be readable by wiremock.
-bootJar {
-    from ('src/main/resources/') {
-        '.'
-    }
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation "commons-io:commons-io:2.6"
 }
