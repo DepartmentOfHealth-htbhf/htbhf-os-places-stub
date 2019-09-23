@@ -42,4 +42,5 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation "commons-io:commons-io:2.6"
+    implementation "io.micrometer:micrometer-registry-prometheus:1.1.4"
 }
