@@ -4,7 +4,8 @@ applications:
   buildpacks:
   - java_buildpack
   health-check-type: process
-  no-route: true
+  routes:
+    - route: htbhf-os-places-stub((app-suffix)).apps.internal
   env:
     JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 11.+ }}'
     SERVER_PORT: '8080'
