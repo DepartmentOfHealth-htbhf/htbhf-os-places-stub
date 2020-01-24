@@ -9,5 +9,3 @@ applications:
   env:
     JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 11.+ }}'
     SERVER_PORT: '8080'
-  services:
-    - logit-ssl-drain
